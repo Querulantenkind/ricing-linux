@@ -1,0 +1,2 @@
+-- Placeholder for init.lua
+-- TODO: Add Neovim configuration here
