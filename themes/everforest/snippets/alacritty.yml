@@ -1,0 +1,93 @@
+# Alacritty Color Snippet - Everforest Dark
+# Location: ~/.config/alacritty/alacritty.yml
+# Usage: Copy this section into your alacritty.yml file
+
+# Font configuration (optional but recommended for theme consistency)
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+  bold:
+    family: JetBrains Mono
+    style: Bold
+  italic:
+    family: JetBrains Mono
+    style: Italic
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+  size: 11.0
+
+# Colors
+colors:
+  primary:
+    background: '#2b3339'
+    foreground: '#d3c6aa'
+    dim_foreground: '#9da9a0'
+    bright_foreground: '#d3c6aa'
+
+  cursor:
+    text: '#2b3339'
+    cursor: '#d3c6aa'
+
+  vi_mode_cursor:
+    text: '#2b3339'
+    cursor: '#7fbbb3'
+
+  search:
+    matches:
+      foreground: '#2b3339'
+      background: '#7fbbb3'
+    focused_match:
+      foreground: '#2b3339'
+      background: '#a7c080'
+
+  hints:
+    start:
+      foreground: '#2b3339'
+      background: '#dbbc7f'
+    end:
+      foreground: '#2b3339'
+      background: '#7fbbb3'
+
+  selection:
+    text: '#2b3339'
+    background: '#7fbbb3'
+
+  normal:
+    black: '#374247'
+    red: '#e67e80'
+    green: '#a7c080'
+    yellow: '#dbbc7f'
+    blue: '#7fbbb3'
+    magenta: '#d699b6'
+    cyan: '#83c092'
+    white: '#d3c6aa'
+
+  bright:
+    black: '#859289'
+    red: '#e67e80'
+    green: '#a7c080'
+    yellow: '#dbbc7f'
+    blue: '#7fbbb3'
+    magenta: '#d699b6'
+    cyan: '#83c092'
+    white: '#d3c6aa'
+
+  dim:
+    black: '#374247'
+    red: '#e67e80'
+    green: '#a7c080'
+    yellow: '#dbbc7f'
+    blue: '#7fbbb3'
+    magenta: '#d699b6'
+    cyan: '#83c092'
+    white: '#d3c6aa'
+
+# Window padding (optional, for visual consistency)
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: none
+  opacity: 0.95

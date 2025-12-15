@@ -1,0 +1,93 @@
+# Alacritty Color Snippet - Dracula
+# Location: ~/.config/alacritty/alacritty.yml
+# Usage: Copy this section into your alacritty.yml file
+
+# Font configuration (optional but recommended for theme consistency)
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+  bold:
+    family: JetBrains Mono
+    style: Bold
+  italic:
+    family: JetBrains Mono
+    style: Italic
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+  size: 11.0
+
+# Colors
+colors:
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+    dim_foreground: '#e0e0dd'
+    bright_foreground: '#ffffff'
+
+  cursor:
+    text: '#282a36'
+    cursor: '#f8f8f2'
+
+  vi_mode_cursor:
+    text: '#282a36'
+    cursor: '#bd93f9'
+
+  search:
+    matches:
+      foreground: '#282a36'
+      background: '#8be9fd'
+    focused_match:
+      foreground: '#282a36'
+      background: '#50fa7b'
+
+  hints:
+    start:
+      foreground: '#282a36'
+      background: '#f1fa8c'
+    end:
+      foreground: '#282a36'
+      background: '#8be9fd'
+
+  selection:
+    text: '#282a36'
+    background: '#bd93f9'
+
+  normal:
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
+
+  bright:
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
+
+  dim:
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
+
+# Window padding (optional, for visual consistency)
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: none
+  opacity: 0.95

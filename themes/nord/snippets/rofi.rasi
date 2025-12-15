@@ -1,0 +1,115 @@
+// Rofi Color Snippet - Nord
+// Location: ~/.config/rofi/config.rasi
+// Usage: Copy this section into your rofi config.rasi file
+//        You can either include this file or paste the colors directly
+
+* {
+    /* ===== Colors ===== */
+    bg:             #2e3440;
+    bg-alt:         #3b4252;
+    fg:             #d8dee9;
+    fg-alt:         #e5e9f0;
+    
+    surface0:       #434c5e;
+    surface1:       #4c566a;
+    surface2:       #4c566a;
+    
+    accent:         #88c0d0;
+    accent-alt:     #5e81ac;
+    
+    urgent:         #bf616a;
+    active:         #a3be8c;
+    
+    /* ===== Base ===== */
+    background-color:   @bg;
+    text-color:         @fg;
+    
+    border-color:       @accent;
+    separatorcolor:     @surface0;
+    
+    /* ===== Spacing ===== */
+    spacing:            10;
+    padding:            10;
+    border:             2;
+    border-radius:      8;
+}
+
+window {
+    background-color:   @bg;
+    border:             2;
+    border-color:       @accent;
+    border-radius:      8;
+    padding:            10;
+}
+
+mainbox {
+    background-color:   @bg;
+    padding:            10;
+}
+
+inputbar {
+    background-color:   @surface0;
+    text-color:         @fg;
+    border-radius:      6;
+    padding:            8px 12px;
+    children:           [ prompt, entry ];
+}
+
+prompt {
+    background-color:   transparent;
+    text-color:         @accent;
+    padding:            0 8px 0 0;
+}
+
+entry {
+    background-color:   transparent;
+    text-color:         @fg;
+    placeholder:        "Search...";
+    placeholder-color:  @fg-alt;
+}
+
+listview {
+    background-color:   transparent;
+    padding:            8px 0 0 0;
+    spacing:            4;
+    scrollbar:          false;
+}
+
+element {
+    background-color:   transparent;
+    text-color:         @fg;
+    border-radius:      6;
+    padding:            8px 12px;
+}
+
+element selected {
+    background-color:   @accent;
+    text-color:         @bg;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               1em;
+    padding:            0 8px 0 0;
+}
+
+message {
+    background-color:   @surface0;
+    border-radius:      6;
+    padding:            8px;
+}
+
+textbox {
+    background-color:   transparent;
+    text-color:         @fg;
+}
+
+/* ===== Font Configuration ===== */
+configuration {
+    font: "JetBrains Mono 11";
+}

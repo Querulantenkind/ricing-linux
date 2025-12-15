@@ -1,0 +1,177 @@
+/* Waybar Style Snippet - Dracula */
+/* Location: ~/.config/waybar/style.css */
+/* Usage: Copy this CSS into your waybar style.css file */
+
+/* ===== Color Variables ===== */
+@define-color bg #282a36;
+@define-color bg-alt #21222c;
+@define-color fg #f8f8f2;
+@define-color fg-alt #f8f8f2;
+@define-color surface0 #44475a;
+@define-color surface1 #44475a;
+@define-color accent #bd93f9;
+@define-color accent-alt #ff79c6;
+@define-color red #ff5555;
+@define-color green #50fa7b;
+@define-color yellow #f1fa8c;
+@define-color blue #bd93f9;
+@define-color magenta #ff79c6;
+@define-color cyan #8be9fd;
+@define-color orange #ffb86c;
+
+/* ===== Base Styling ===== */
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+    border-radius: 5px;
+    border: 2px solid @accent;
+}
+
+/* ===== Tooltip ===== */
+tooltip {
+    background: @surface0;
+    color: @fg;
+    border: 2px solid @accent;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+/* ===== Workspaces ===== */
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: @fg-alt;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+#workspaces button.active {
+    background: @accent;
+    color: @bg;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @bg;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @fg;
+}
+
+/* ===== Modules ===== */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 4px 10px;
+    margin: 4px;
+    background: @surface0;
+    color: @fg;
+    border-radius: 5px;
+}
+
+/* ===== Specific Module Colors ===== */
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#cpu {
+    color: @cyan;
+}
+
+#memory {
+    color: @magenta;
+}
+
+#disk {
+    color: @orange;
+}
+
+#temperature {
+    color: @cyan;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#network {
+    color: @green;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @fg-alt;
+}
+
+#tray {
+    padding: 4px 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @red;
+}
+
+#idle_inhibitor {
+    color: @fg-alt;
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+}
+
+#mode {
+    background: @red;
+    color: @bg;
+    font-weight: bold;
+}
+
+/* ===== Animations ===== */
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @bg;
+    }
+}

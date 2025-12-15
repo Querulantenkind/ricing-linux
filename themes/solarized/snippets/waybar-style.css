@@ -1,0 +1,178 @@
+/* Waybar Style Snippet - Solarized Dark */
+/* Location: ~/.config/waybar/style.css */
+/* Usage: Copy this CSS into your waybar style.css file */
+
+/* ===== Color Variables ===== */
+@define-color bg #002b36;
+@define-color bg-alt #073642;
+@define-color fg #839496;
+@define-color fg-alt #93a1a1;
+@define-color surface0 #073642;
+@define-color surface1 #586e75;
+@define-color accent #268bd2;
+@define-color accent-alt #2aa198;
+@define-color red #dc322f;
+@define-color green #859900;
+@define-color yellow #b58900;
+@define-color blue #268bd2;
+@define-color magenta #d33682;
+@define-color cyan #2aa198;
+@define-color orange #cb4b16;
+@define-color violet #6c71c4;
+
+/* ===== Base Styling ===== */
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+    border-radius: 4px;
+    border: 2px solid @accent;
+}
+
+/* ===== Tooltip ===== */
+tooltip {
+    background: @surface0;
+    color: @fg;
+    border: 2px solid @accent;
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+/* ===== Workspaces ===== */
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: @fg-alt;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+#workspaces button.active {
+    background: @accent;
+    color: @bg;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @bg;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @fg;
+}
+
+/* ===== Modules ===== */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 4px 10px;
+    margin: 4px;
+    background: @surface0;
+    color: @fg;
+    border-radius: 4px;
+}
+
+/* ===== Specific Module Colors ===== */
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#cpu {
+    color: @blue;
+}
+
+#memory {
+    color: @magenta;
+}
+
+#disk {
+    color: @orange;
+}
+
+#temperature {
+    color: @cyan;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#network {
+    color: @green;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @fg-alt;
+}
+
+#tray {
+    padding: 4px 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @red;
+}
+
+#idle_inhibitor {
+    color: @fg-alt;
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+}
+
+#mode {
+    background: @red;
+    color: @bg;
+    font-weight: bold;
+}
+
+/* ===== Animations ===== */
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @bg;
+    }
+}
