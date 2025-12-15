@@ -207,28 +207,53 @@ Blue:           #2ac3de
 
 **Available in this repo:** `themes/tokyo-night/`
 
-## Other Notable Schemes
+## Additional Themes in This Repository
+
+### Rosé Pine
+**Description:** Low-contrast theme with muted, soothing colors for reduced eye strain
+**Variants:** Main, Moon, Dawn
+**Best For:** Reduced eye strain, subtle beauty, pastel lovers
+**Official:** https://rosepinetheme.com
+**Available in this repo:** `themes/rose-pine/`
+
+### Everforest
+**Description:** Green forest inspired theme with comfortable, natural colors
+**Variants:** Hard, Medium, Soft (both dark and light)
+**Best For:** Nature lovers, calming aesthetic, green color preference
+**Official:** https://github.com/sainnhe/everforest
+**Available in this repo:** `themes/everforest/`
 
 ### Solarized
-**Description:** Scientific color scheme designed for reduced eye strain
+**Description:** Scientifically designed color scheme for reduced eye strain
 **Variants:** Dark, Light
-**Best For:** Long reading/coding sessions, academic work
+**Best For:** Long reading/coding sessions, academic work, precision
+**Official:** https://ethanschoonover.com/solarized
+**Note:** Most widely ported color scheme, based on color theory
+**Available in this repo:** `themes/solarized/`
+
+## Themes Directory
+
+All themes mentioned above are available in the `themes/` directory with:
+- **Complete color palettes** in `colors.conf`
+- **Ready-to-use snippets** for 8+ applications
+- **Comprehensive documentation** with usage guides
+- **Visual previews** and color tables
+
+See [themes/README.md](../../themes/README.md) for the complete theme gallery.
+
+## Other Popular Schemes (Not Included)
 
 ### One Dark
 **Description:** Atom's iconic dark theme
 **Best For:** Familiar to many developers, balanced colors
 
-### Everforest
-**Description:** Green forest inspired theme
-**Best For:** Nature lovers, calming aesthetic
-
-### Rose Pine
-**Description:** Low-contrast theme with muted colors
-**Best For:** Reduced eye strain, subtle beauty
-
 ### Monokai
 **Description:** Vibrant, high-contrast theme
 **Best For:** Syntax highlighting, code editing
+
+### Ayu
+**Description:** Simple, bright theme with 3 variants
+**Best For:** Clean, modern setups
 
 ## Choosing a Color Scheme
 

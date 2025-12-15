@@ -64,9 +64,9 @@ Whether you're a complete beginner looking to try tiling window managers for the
 ## Features
 
 ### General
-- 🎨 Multiple complete theme presets (Nord, Dracula, Catppuccin, Gruvbox, etc.)
+- 🎨 **8 Complete Theme Presets** with ready-to-use config snippets (Catppuccin, Nord, Dracula, Gruvbox, Tokyo Night, Rosé Pine, Everforest, Solarized) - See [Theme Gallery](themes/README.md)
 - 📦 Modular configuration structure - use only what you need
-- 🔄 Easy theme switching with automated scripts
+- 📝 Copy-paste snippets for manual theme application (recommended for learning)
 - 📸 Extensive before/after screenshots and comparisons
 - 📚 Detailed documentation for every component
 - 🚀 Quick installation scripts with dependency management
@@ -142,12 +142,29 @@ Whether you're a complete beginner looking to try tiling window managers for the
 │   │   └── init.lua
 │   └── README.md              # Overview of all configs
 │
-├── themes/                    # Complete theme presets
-│   ├── nord/                  # Nord theme
+├── themes/                    # Theme gallery & inspiration (8 themes)
+│   ├── README.md              # Theme gallery overview
+│   ├── example-theme-automation.sh  # Optional automation example
+│   ├── catppuccin/            # Modern pastel theme
+│   │   ├── README.md          # Full theme documentation
 │   │   ├── colors.conf        # Color definitions
-│   │   ├── wallpaper.png      # Theme wallpaper
-│   │   └── README.md          # Theme documentation
-│   ├── dracula/               # Dracula theme
+│   │   ├── snippets/          # Ready-to-use config snippets
+│   │   │   ├── alacritty.yml
+│   │   │   ├── kitty.conf
+│   │   │   ├── rofi.rasi
+│   │   │   ├── waybar-style.css
+│   │   │   ├── polybar-colors.ini
+│   │   │   ├── i3-colors.conf
+│   │   │   ├── hyprland-colors.conf
+│   │   │   └── dunst-colors.conf
+│   │   └── wallpapers/        # Theme wallpapers
+│   ├── nord/                  # Arctic professional theme
+│   ├── dracula/               # Vibrant high-contrast theme
+│   ├── gruvbox/               # Retro warm earthy theme
+│   ├── tokyo-night/           # Modern Tokyo-inspired theme
+│   ├── rose-pine/             # Low-contrast muted theme
+│   ├── everforest/            # Nature-inspired green theme
+│   └── solarized/             # Scientifically designed theme
 │   ├── catppuccin/            # Catppuccin theme
 │   ├── gruvbox/               # Gruvbox theme
 │   ├── tokyo-night/           # Tokyo Night theme
@@ -428,7 +445,8 @@ The repository includes extensive documentation for all skill levels:
 
 ### References
 - Complete keybindings cheatsheet
-- Color scheme gallery
+- Color scheme gallery with 8 complete themes
+- Theme gallery with ready-to-use snippets - [themes/README.md](themes/README.md)
 - Useful external resources and links
 
 ---
@@ -614,7 +632,9 @@ fc-list
 ```
 
 **Theme not applying:**
-- Ensure you ran the theme script: `./themes/apply-theme.sh <theme>`
+- Copy theme snippets manually from `themes/<theme>/snippets/`
+- Check each theme's README for specific instructions
+- Ensure config file paths are correct
 - Reload your WM configuration
 - Check file permissions
 

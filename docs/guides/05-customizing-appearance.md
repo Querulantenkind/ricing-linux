@@ -15,29 +15,97 @@ See [Color Schemes Reference](../references/color-schemes.md) for detailed infor
 - **Dracula**: Vibrant, high contrast
 - **Tokyo Night**: Clean, contemporary
 
-### Applying Themes from This Repository
+### Using the Themes Gallery
 
+This repository includes a **comprehensive themes collection** with 8 curated color schemes:
+
+**Available Themes:**
+- 🎨 **Catppuccin** - Modern pastel with excellent contrast
+- ❄️ **Nord** - Arctic, professional, minimalist
+- 🧛 **Dracula** - Vibrant, high-contrast
+- 🍂 **Gruvbox** - Retro warm earthy tones
+- 🌃 **Tokyo Night** - Modern Tokyo-inspired
+- 🌹 **Rosé Pine** - Low-contrast, muted pastels
+- 🌲 **Everforest** - Nature-inspired green theme
+- ☀️ **Solarized** - Scientifically designed
+
+**Browse the Gallery:**
 ```bash
 cd ~/Documents/ricing-linux/themes
 
-# List available themes
-ls -la
+# View gallery
+cat README.md
 
-# Apply a theme (automatically updates all configs)
-./apply-theme.sh catppuccin
-./apply-theme.sh nord
-./apply-theme.sh gruvbox
-./apply-theme.sh dracula
-./apply-theme.sh tokyo-night
+# Explore a specific theme
+cat catppuccin/README.md
+ls catppuccin/snippets/
 ```
 
-This updates:
-- Window manager colors
-- Status bar theme
-- Terminal colors
-- Application launcher
-- Notification daemon
-- GTK theme
+### Applying Themes (Recommended: Manual Method)
+
+Each theme provides **ready-to-use config snippets** for manual application:
+
+**Step 1: Choose a theme**
+```bash
+# Browse available themes
+cd themes/
+ls -la
+```
+
+**Step 2: View theme documentation**
+```bash
+# Read full theme guide
+cat catppuccin/README.md
+```
+
+**Step 3: Copy snippets to your configs**
+```bash
+# Example: Apply to Alacritty
+cat themes/catppuccin/snippets/alacritty.yml >> ~/.config/alacritty/alacritty.yml
+
+# Example: Apply to i3wm
+cat themes/catppuccin/snippets/i3-colors.conf >> ~/.config/i3/config
+i3-msg reload
+
+# Example: Apply to Hyprland
+cat themes/catppuccin/snippets/hyprland-colors.conf >> ~/.config/hypr/hyprland.conf
+hyprctl reload
+```
+
+**Available snippet files per theme:**
+- `alacritty.yml` - Alacritty terminal colors
+- `kitty.conf` - Kitty terminal colors
+- `rofi.rasi` - Rofi launcher colors
+- `waybar-style.css` - Waybar status bar
+- `polybar-colors.ini` - Polybar status bar
+- `i3-colors.conf` - i3wm window manager
+- `hyprland-colors.conf` - Hyprland window manager
+- `dunst-colors.conf` - Dunst notifications
+
+### Optional: Example Automation Script
+
+An **example automation script** is provided for reference:
+
+```bash
+# View usage
+./themes/example-theme-automation.sh
+
+# Apply a theme (with prompts and backups)
+./themes/example-theme-automation.sh catppuccin
+```
+
+**⚠️ Note**: This script is for **demonstration purposes only**. Manual snippet application is recommended for learning and full control.
+
+### What Gets Updated
+
+When applying a theme (manually or via script), these components can be themed:
+- **Window Manager**: Border colors, focus indicators
+- **Status Bar**: Background, foreground, module colors
+- **Terminal**: 16 ANSI colors + background/foreground
+- **Launcher**: Rofi colors and styling
+- **Notifications**: Dunst urgency colors
+- **Fonts**: Optional font configuration
+- **Borders & Gaps**: Consistent spacing values
 
 ### Manual Color Configuration
 
