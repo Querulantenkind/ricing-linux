@@ -114,6 +114,81 @@ Comprehensive system update helper with cleanup options.
 - Desktop notifications
 - Logging
 
+## Utility Scripts
+
+### `audio-control.sh`
+
+Control system volume and mute state. Supports `pamixer` and `pactl`.
+
+```bash
+# Increase volume by 5%
+./utilities/audio-control.sh up 5
+
+# Mute/unmute
+./utilities/audio-control.sh toggle
+
+# Show current volume
+./utilities/audio-control.sh show
+```
+
+### `brightness.sh`
+
+Control screen brightness. Uses `brightnessctl`, `light` or `xbacklight`.
+
+```bash
+# Increase brightness by 10%
+./utilities/brightness.sh up 10
+
+# Set brightness to 50%
+./utilities/brightness.sh set 50
+```
+
+### `power-menu.sh`
+
+Interactive power menu using `rofi` or `dmenu` with options: Lock, Suspend, Reboot, Shutdown, Logout.
+
+```bash
+# Run power menu
+./utilities/power-menu.sh
+
+# Skip confirmation
+./utilities/power-menu.sh --no-confirm
+```
+
+### `screen-record.sh`
+
+Start/stop screen recordings using `wf-recorder` or `ffmpeg`.
+
+```bash
+# Start recording (default filename)
+./utilities/screen-record.sh start
+
+# Stop recording
+./utilities/screen-record.sh stop
+```
+
+### `screenshot.sh`
+
+Take screenshots for Wayland (grim/slurp) or X11 (maim/scrot) and optionally copy to clipboard.
+
+```bash
+# Fullscreen
+./utilities/screenshot.sh full
+
+# Region selection
+./utilities/screenshot.sh region
+
+# Region selection and copy to clipboard
+./utilities/screenshot.sh clipboard
+```
+
+### Making them executable
+
+```bash
+chmod +x scripts/utilities/*.sh
+```
+
+
 ## Making Scripts Executable
 
 ```bash
